@@ -1,0 +1,9 @@
+database_data
+dist
+k8s
+node_modules
+.env*
+.gitignore
+.prettierrc
+.eslint.config.mjs
+.git
