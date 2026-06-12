@@ -8,7 +8,7 @@ spec:
   sources:
     - repoURL: https://github.com/thibault-poire/plants.git
       targetRevision: 'v*.*.*'
-      path: k8s
+      path: k8s/api
       ref: repository
     - repoURL: https://charts.bitnami.com/bitnami
       chart: mongodb
