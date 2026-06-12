@@ -16,7 +16,7 @@ spec:
       helm:
         releaseName: mongodb
         valueFiles:
-          - $repository/database/values.yaml
+          - $repository/k8s/database/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: plants
@@ -24,3 +24,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
