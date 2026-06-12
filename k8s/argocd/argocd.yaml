@@ -7,7 +7,7 @@ spec:
   project: default
   sources:
     - repoURL: https://github.com/thibault-poire/plants.git
-      targetRevision: 'prod'
+      targetRevision: prod
       path: k8s/api
       ref: repository
     - repoURL: https://charts.bitnami.com/bitnami
