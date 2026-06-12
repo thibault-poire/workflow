@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: plants-api-service
+  labels:
+    app.kubernetes.io/name: api
+    app.kubernetes.io/component: server
+    app.kubernetes.io/part-of: plants
+spec:
+  selector:
+    app.kubernetes.io/name: api
+    app.kubernetes.io/component: server
+    app.kubernetes.io/part-of: plants
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000

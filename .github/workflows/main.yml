@@ -27,5 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/workflow:latest, ${{ secrets.DOCKER_HUB_USERNAME }}/workflow:${{ steps.vars.outputs.short_sha }}
-  
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/plants-api:latest, ${{ secrets.DOCKER_HUB_USERNAME }}/plants-api:${{ steps.vars.outputs.short_sha }}

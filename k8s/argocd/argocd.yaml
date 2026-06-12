@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: plants
+  namespace: argocd
+spec:
+  project: default
+  sources:
+    - repoURL: https://github.com/thibault-poire/workflow.git
+      targetRevision: 'v*.*.*'
+      path: k8s
+      ref: repository
+    - repoURL: https://charts.bitnami.com/bitnami
+      chart: mongodb
+      targetRevision: 19.1.10
+      helm:
+        releaseName: mongodb
+        valueFiles:
+          - $repository/database/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: plants
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
