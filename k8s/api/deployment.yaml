@@ -25,5 +25,17 @@ spec:
           image: khaym/plants-api
           ports:
             - containerPort: 3000
+          env:
+            - name: MONGO_USER
+              value: api_user
+            - name: MONGO_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb          # Nom de votre existingSecret
+                  key: mongodb-password
+            - name: MONGO_HOST
+              value: mongodb
+            - name: MONGO_PORT
+              value: 27017
       imagePullSecrets:
         - name: docker-hub-secret
