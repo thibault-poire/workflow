@@ -25,3 +25,5 @@ spec:
           image: khaym/plants-api
           ports:
             - containerPort: 3000
+      imagePullSecrets:
+        - name: docker-hub-secret
