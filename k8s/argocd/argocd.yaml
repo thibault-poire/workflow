@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   sources:
-    - repoURL: https://github.com/thibault-poire/workflow.git
+    - repoURL: https://github.com/thibault-poire/plants.git
       targetRevision: 'v*.*.*'
       path: k8s
       ref: repository
